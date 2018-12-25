@@ -17,7 +17,7 @@ def index():
 
 
 @socketio.on("submit message")
-def vote(data):
+def chat(data):
     if(len(messages) > 10):
         messages.pop(0)
     messages.append(data["message"])
